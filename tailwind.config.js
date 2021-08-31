@@ -8,7 +8,20 @@ module.exports = {
             serif: ['"Roboto Slab"', 'serif'],
             body: ['Roboto', 'sans-serif'],
         },
-        extend: {},
+        extend: {
+            spacing: {
+                '72': '18rem',
+                '84': '21rem',
+                '96': '24rem',
+                    '27': '200px',
+                'inner' : '680px',
+                'bar' : '450px',
+                'logo' : '200px',
+              },
+            width :{
+                'inner': '680px'
+            }
+        },
     },
     variants: {
         extend: {},

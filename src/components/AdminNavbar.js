@@ -30,17 +30,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
                             showSidebar === 'left-0' ? 'left-64' : '-left-64'
                         } z-50 transition-all duration-300`}
                     >
-                        <Button
-                            color="transparent"
-                            buttonType="link"
-                            size="lg"
-                            iconOnly
-                            rounded
-                            ripple="light"
-                            onClick={() => setShowSidebar('-left-64')}
-                        >
-                            <Icon name="close" size="2xl" color="white" />
-                        </Button>
+                    
                     </div>
                 </div>
 
@@ -57,11 +47,6 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
                         <div className="-mr-4 ml-6">
                             <Dropdown
                                 color="transparent"
-                                buttonText={
-                                    <div className="w-12">
-                                        <Image src={ProfilePicture} rounded />
-                                    </div>
-                                }
                                 rounded
                                 style={{
                                     padding: 0,
