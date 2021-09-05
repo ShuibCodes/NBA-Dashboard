@@ -3,8 +3,7 @@ import Chart from 'chart.js';
 import Card from '@material-tailwind/react/Card';
 import CardHeader from '@material-tailwind/react/CardHeader';
 import CardBody from '@material-tailwind/react/CardBody';
-import BookerLine from '../components/Charts/BookerLine'
-import MVPLine from '../components/Charts/MVPLine'
+import LebronLine from './LebronLine'
 export default function ChartLine() {
   
 
@@ -18,7 +17,7 @@ export default function ChartLine() {
             </CardHeader>
             <CardBody>
                 <div className="relative h-96 w-24">
-                    <MVPLine/>
+                    <LebronLine/>
                 </div>
             </CardBody>
         </Card>

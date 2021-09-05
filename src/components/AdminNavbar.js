@@ -50,7 +50,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
                                 rounded
                                 style={{
                                     padding: 0,
-                                    color: 'transparent',
+                                
                                 }}
                             >
                                 <DropdownItem color="lightBlue">

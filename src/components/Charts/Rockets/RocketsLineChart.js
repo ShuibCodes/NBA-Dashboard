@@ -1,13 +1,9 @@
-import { useEffect } from 'react';
-import Chart from 'chart.js';
+import React from 'react'
+import RocketsLine from './RocketsLine'
 import Card from '@material-tailwind/react/Card';
 import CardHeader from '@material-tailwind/react/CardHeader';
 import CardBody from '@material-tailwind/react/CardBody';
-import BookerLine from '../components/Charts/BookerLine'
-import MVPLine from '../components/Charts/MVPLine'
-export default function ChartLine() {
-  
-
+function RocketsLineChart() {
     return (
         <Card>
             <CardHeader color="orange" contentPosition="left">
@@ -18,9 +14,11 @@ export default function ChartLine() {
             </CardHeader>
             <CardBody>
                 <div className="relative h-96 w-24">
-                    <MVPLine/>
+                    <RocketsLine/>
                 </div>
             </CardBody>
         </Card>
-    );
+    )
 }
+
+export default RocketsLineChart

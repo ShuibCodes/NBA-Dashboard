@@ -1,110 +1,50 @@
 import React, { useMemo } from "react";
 import { ResponsiveLine } from "@nivo/line";
 
-const booker_line = [
-  {
-    season: 2015,
-    pts: 26.97,
-  },
-  {
-    season: 2016,
-    pts: 22,
-  },
-  {
-    season: 2017,
-    pts: 25,
-  },
-  {
-    season: 2018,
-    pts: 26.5,
-  },
-  {
-    season: 2019,
-    pts: 26.1,
-  },
-  {
-    season: 2020,
-    pts: 25.55,
-  },
-  {
-    season: 2021,
-    pts: 26.56,
-  },
-];
 
-const kd = [
-  {
-    season: 2016,
-    pts: 25.1,
-  },
-  {
-    season: 2017,
-    pts: 26.4,
-  },
-  {
-    season: 2018,
-    pts: 26.0,
-  },
-  {
-    season: 2019,
-    pts: 0,
-  },
 
-  {
-    season: 2020,
-    pts: 26.9,
-  },
-];
-const westbrook = [
-  {
+const kawhi_data = [
+    {
       season: 2015,
-      pts: 22.2,
+      pts: 21.2,
     },
-  {
+    {
       season: 2016,
-      pts: 31.1,
+      pts: 25.5,
     },
     {
       season: 2017,
-      pts: 25.4,
+      pts: 16.2,
     },
     {
       season: 2018,
-      pts: 22.2,
+      pts: 26.6,
     },
     {
       season: 2019,
-      pts: 25.3,
+      pts: 27.1,
     },
-  
     {
       season: 2020,
-      pts: 22.2,
+      pts: 24.8,
     },
-]
-function BookerLine() {
+    {
+      season: 2021,
+      pts: 24.8,
+    },
+  ];
+
+function LebronLine() {
+
   const data = [
     {
-      id: "Booker",
+      id: "Kawhi Leonard",
       color: "hsl(22, 70%, 50%)",
       data: [],
     },
   ];
 
-  const durantSet = [
-    {
-      id: "Durant",
-      color: "hsl(22, 70%, 50%)",
-      data: [],
-    },
-  ];
-  const russSet = [
-    {
-      id: "Westbrook",
-      color: "hsl(22, 70%, 50%)",
-      data: [],
-    },
-  ];
+ 
 
   const filteredData = (data, nbaData) => {
     const newData = data[0].data.push(...nbaData);
@@ -123,24 +63,21 @@ function BookerLine() {
     return data;
   };
 
-  const kevin = filteredData(durantSet, kd);
-  const booker = filteredData(data, booker_line);
-  booker.push(kevin[0])
+  const kawhi = filteredData(data, kawhi_data);
+ 
   
-
-  console.log(booker)
   // work out how to put tie all the array of objects together to make multiple lines on the chart
   // style={{ height: "400px", width: "680px" }}
   return (
     <div class="h-96 w-96 lg:w-inner" >
       <ResponsiveLine
-        data={booker}
+        data={kawhi}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: "point" }}
         yScale={{
           type: "linear",
           min: "10",
-          max: "100",
+          max: "40",
           stacked: true,
           reverse: false,
         }}
@@ -202,4 +139,4 @@ function BookerLine() {
   );
 }
 
-export default BookerLine;
+export default LebronLine;

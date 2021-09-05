@@ -1,34 +1,34 @@
 import React, { useMemo } from "react";
 import { ResponsiveLine } from "@nivo/line";
 
-const booker_line = [
+const lebron_line = [
   {
     season: 2015,
-    pts: 26.97,
+    pts: 35.8,
   },
   {
     season: 2016,
-    pts: 22,
+    pts: 25.3,
   },
   {
     season: 2017,
-    pts: 25,
+    pts: 27.5,
   },
   {
     season: 2018,
-    pts: 26.5,
+    pts: 27.4,
   },
   {
     season: 2019,
-    pts: 26.1,
+    pts: 25.3,
   },
   {
     season: 2020,
-    pts: 25.55,
+    pts: 25,
   },
   {
     season: 2021,
-    pts: 26.56,
+    pts: 25,
   },
 ];
 
@@ -55,37 +55,66 @@ const kd = [
     pts: 26.9,
   },
 ];
-const westbrook = [
-  {
-      season: 2015,
-      pts: 22.2,
-    },
-  {
-      season: 2016,
-      pts: 31.1,
-    },
+
+const curry = [
     {
-      season: 2017,
-      pts: 25.4,
-    },
+        season: 2015,
+        pts: 30.1,
+      },
     {
-      season: 2018,
-      pts: 22.2,
-    },
-    {
-      season: 2019,
-      pts: 25.3,
-    },
-  
-    {
-      season: 2020,
-      pts: 22.2,
-    },
+        season: 2016,
+        pts: 25.3,
+      },
+      {
+        season: 2017,
+        pts: 26.4,
+      },
+      {
+        season: 2018,
+        pts: 27.3,
+      },
+      {
+        season: 2019,
+        pts: 0,
+      },
+    
+      {
+        season: 2020,
+        pts: 32,
+      },
 ]
-function BookerLine() {
+
+const westbrook = [
+    {
+        season: 2015,
+        pts: 22.2,
+      },
+    {
+        season: 2016,
+        pts: 31.1,
+      },
+      {
+        season: 2017,
+        pts: 25.4,
+      },
+      {
+        season: 2018,
+        pts: 22.2,
+      },
+      {
+        season: 2019,
+        pts: 25.3,
+      },
+    
+      {
+        season: 2020,
+        pts: 22.2,
+      },
+]
+function MVP() {
   const data = [
     {
-      id: "Booker",
+      id: "Lebron",
       color: "hsl(22, 70%, 50%)",
       data: [],
     },
@@ -101,6 +130,13 @@ function BookerLine() {
   const russSet = [
     {
       id: "Westbrook",
+      color: "hsl(22, 70%, 50%)",
+      data: [],
+    },
+  ];
+  const currySet = [
+    {
+      id: "Curry",
       color: "hsl(22, 70%, 50%)",
       data: [],
     },
@@ -124,23 +160,26 @@ function BookerLine() {
   };
 
   const kevin = filteredData(durantSet, kd);
-  const booker = filteredData(data, booker_line);
-  booker.push(kevin[0])
-  
+  const lebron = filteredData(data, lebron_line);
+  const russ = filteredData(russSet,westbrook)
+  const steph = filteredData(currySet,curry)
 
-  console.log(booker)
+
+
+  lebron.push(kevin[0],russ[0],steph[0]);
+
   // work out how to put tie all the array of objects together to make multiple lines on the chart
   // style={{ height: "400px", width: "680px" }}
   return (
     <div class="h-96 w-96 lg:w-inner" >
       <ResponsiveLine
-        data={booker}
+        data={lebron}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: "point" }}
         yScale={{
           type: "linear",
           min: "10",
-          max: "100",
+          max: "120",
           stacked: true,
           reverse: false,
         }}
@@ -202,4 +241,4 @@ function BookerLine() {
   );
 }
 
-export default BookerLine;
+export default MVP;
