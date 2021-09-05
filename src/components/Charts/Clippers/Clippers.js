@@ -7,7 +7,7 @@ function Clippers() {
   return (
     <div className="grid grid-cols-1 gap-14">
     <ClippersLine />
-    <div className="col-start-4 col-end-6  mb-14">
+    <div className="mb-14">
       <ClippersBar />
     </div>
   </div>
