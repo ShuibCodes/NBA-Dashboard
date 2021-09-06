@@ -35,7 +35,7 @@ function LebronLine() {
 
   const data = [
     {
-      id: "Lebron James",
+      id: "James Harden",
       color: "hsl(22, 70%, 50%)",
       data: [],
     },

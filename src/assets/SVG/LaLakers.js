@@ -5,10 +5,10 @@ function laLakers() {
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="405.923"
+        width="45.923"
         height="253.092"
         data-name="los angeles lakers"
-        viewBox="0 120 3200.923 10"
+        viewBox=" 10 50 400 120 "
       >
         <defs>
           <clipPath id="a">

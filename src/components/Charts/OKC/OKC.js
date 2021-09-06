@@ -6,9 +6,9 @@ function OKC() {
     <div>
       <div className="grid grid-cols-1 gap-14">
         <OKCLineChart />
-        <div className="mb-14">
+        <div style={{position:"relative", left:"100px"}}  className="mb-14 ">
           <OKCBar />
-        </div>
+        </div>  
       </div>
     </div>
   );

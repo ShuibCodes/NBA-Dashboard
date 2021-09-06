@@ -270,17 +270,17 @@ import React, {
   
   
    
-  const [layout , setLayout] = useState("horizontal")
+    const [layout , setLayout] = useState("vertical")
   
-    
-    const changeLayout = () => {
-        if(layout === "horizontal"){
-          setLayout("vertical")
-        } else if(layout == "vertical"){
-          setLayout("horizontal")
-  
-        }
+  const changeLayout = () => {
+    if(layout === "vertical"){
+      setLayout("horizontal")
+    } else if(layout == "horizontal"){
+      setLayout("vertical")
+
     }
+}
+
   
     return (
       <>
