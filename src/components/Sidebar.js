@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import AdminNavbar from "./AdminNavbar";
 import Icon from "@material-tailwind/react/Icon";
 import H6 from "@material-tailwind/react/Heading6";
-import logo from "../assets/img/nba-log.png";
-import phoenix from "../assets/img/phoenix-suns.png";
-import  rockets from "../assets/img/houston-rockets.png";
-import gs from "../assets/img/gsw-logo.png";
-import laclippers from "../assets/img/laclippers.png";
-import lalakers from "../assets/img/lalakers.png";
 import LaLakers from '../assets/SVG/LaLakers'
+import Rockets from '../assets/SVG/Rocketslogo'
+import  Gsw from '../assets/SVG/GSWlogo'
+import Clippers from '../assets/SVG/clipperslogo'
+import Suns from '../assets/SVG/Phoenixlogo'
+import Okc from '../assets/SVG/OKClogo'
+import logo from '../assets/img/nba-log.png'
 
 export default function Sidebar() {
   const [showSidebar, setShowSidebar] = useState("-left-64");
@@ -51,7 +51,7 @@ export default function Sidebar() {
                 className="rounded-lg mb-2 flex"
                 activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
               >
-                <img src={phoenix} alt="suns"></img>
+                <Suns/>
                 <NavLink
                   to="/phoenix_suns"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
@@ -78,7 +78,7 @@ export default function Sidebar() {
                 className="rounded-lg mb-2 flex"
                 activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
               >
-                <img src={laclippers} alt="la"></img>
+                <Clippers/>
                 <NavLink
                   to="/clippers"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
@@ -91,7 +91,7 @@ export default function Sidebar() {
                 className="rounded-lg mb-2 flex"
                 activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
               >
-                <img src={gs} alt="gsw"></img>
+                <Gsw/>
                 <NavLink
                   to="/GSW"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
@@ -104,7 +104,7 @@ export default function Sidebar() {
                 className="rounded-lg mb-2 flex"
                 activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
               >
-                <img src={rockets} alt="rockets"></img>
+                <Rockets/>
                 <NavLink
                   to="/Rockets"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
@@ -117,7 +117,7 @@ export default function Sidebar() {
                 className="rounded-lg mb-2 flex"
                 activeClassName="bg-gradient-to-tr from-light-blue-500 to-light-blue-700 text-white shadow-md"
               >
-                <img src={phoenix} alt="suns"></img>
+                <Okc/>
                 <NavLink
                   to="/OKC"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"

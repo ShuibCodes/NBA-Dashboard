@@ -6,7 +6,7 @@ import clippers from './components/Charts/Clippers/Clippers'
 import rockets from './components/Charts/Rockets/Rockets'
 import gsw from './components/Charts/GSW/GSW'
 import okc from './components/Charts/OKC/OKC'
-
+import Timer from '../src/Timer'
 
 
 
@@ -41,7 +41,9 @@ function App() {
                     <Route exact path="/OKC" component={okc} />
                 </Switch>
                 
-         
+                <Switch>
+                    <Route exact path="/Timer" component={Timer} />
+                </Switch>
          
             </div>
         </>

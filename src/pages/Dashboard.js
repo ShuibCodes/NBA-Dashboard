@@ -6,7 +6,8 @@ import TrafficCard from 'components/TrafficCard';
 
 export default function Dashboard() {
     return (
-        <>
+        <>  
+
              {/* top half of page  */}
             <div className="bg-light-blue-500 px-3 md:px-8 h-40" />
             {/* both elements on the page (line bar chart) */}

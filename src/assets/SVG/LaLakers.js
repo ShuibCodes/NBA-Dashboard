@@ -2,14 +2,11 @@ import React from "react";
 
 function laLakers() {
   return (
-    <div>
+    <div className="h-12" >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="45.923"
-        height="253.092"
-        data-name="los angeles lakers"
-        viewBox=" 10 50 400 120 "
-      >
+      width="45.923" height="253.092" viewBox="10 1000 400 120 "
+        
+       >
         <defs>
           <clipPath id="a">
             <path
