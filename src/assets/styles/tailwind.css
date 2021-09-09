@@ -653,6 +653,9 @@ video {
 .h-40{
 	height: 10rem;
 }
+.h-12{
+	height: 3rem;
+}
 .h-auto{
 	height: auto;
 }
@@ -804,6 +807,14 @@ video {
 }
 .p-4{
 	padding: 1rem;
+}
+.px-5{
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+.py-5{
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
 }
 .py-6{
 	padding-top: 1.5rem;
