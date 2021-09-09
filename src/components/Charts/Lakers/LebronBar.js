@@ -281,11 +281,9 @@ const changeLayout = () => {
 
   }
 }
-
-
   return (
     <>
-      <div className="w-auto h-auto">
+      <div className="w-auto h-auto   lg:ml-10 lg:mt-6 lg:w-inner">
     
     <button class="bg-blue-300 w-46  h-10 ml-10   rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
       <div class="w-auto h-96 px-11 relative right-24 ">
@@ -325,14 +323,7 @@ const changeLayout = () => {
             borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
             axisTop={null}
             axisRight={null}
-            axisBottom={{
-              tickSize: 5,
-              tickPadding: 5,
-              tickRotation: 0,
-              legend: "stats",
-              legendPosition: "middle",
-              legendOffset: 40,
-            }}
+           
             axisLeft={{
               tickSize: 5,
               tickPadding: 5,

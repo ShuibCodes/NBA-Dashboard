@@ -45,28 +45,7 @@ export default function Dashboard() {
                             percentageColor="green"
                             date="Since last month"
                         />
-                          <StatusCard
-                            color="pink"
-                            icon="trending_up"
-                            title="Traffic"
-                            amount="350,897"
-                            percentage="3.48"
-                            percentageIcon="arrow_upward"
-                            percentageColor="green"
-                            date="Since last month"
-                        />
-                     
-                     <StatusCard
-                            color="pink"
-                            icon="trending_up"
-                            title="Traffic"
-                            amount="350,897"
-                            percentage="3.48"
-                            percentageIcon="arrow_upward"
-                            percentageColor="green"
-                            date="Since last month"
-                        />
-                     
+                      
                      
                     
                     </div>

@@ -12,7 +12,7 @@ import Okc from '../assets/SVG/OKClogo'
 import logo from '../assets/img/nba-log.png'
 
 export default function Sidebar() {
-  const [showSidebar, setShowSidebar] = useState("-left-64");
+  const [showSidebar, setShowSidebar] = useState("-left-94");
   return (
     <>
       <AdminNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
@@ -21,7 +21,7 @@ export default function Sidebar() {
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
           <a
-            href="https://material-tailwind.com?ref=mtd"
+            href="#"
             target="_blank"
             rel="noreferrer"
             className="mt-2 text-center w-full inline-block"

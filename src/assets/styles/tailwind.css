@@ -548,6 +548,10 @@ video {
 .z-10{
 	z-index: 10;
 }
+.mx-1{
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+}
 .mx-auto{
 	margin-left: auto;
 	margin-right: auto;
@@ -559,6 +563,12 @@ video {
 .my-4{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+.mb-3{
+	margin-bottom: 0.75rem;
+}
+.mr-1{
+	margin-right: 0.25rem;
 }
 .mt-1{
 	margin-top: 0.25rem;
@@ -755,14 +765,14 @@ video {
 .whitespace-nowrap{
 	white-space: nowrap;
 }
+.rounded-lg{
+	border-radius: 0.5rem;
+}
 .rounded{
 	border-radius: 0.25rem;
 }
 .rounded-xl{
 	border-radius: 0.75rem;
-}
-.rounded-lg{
-	border-radius: 0.5rem;
 }
 .rounded-full{
 	border-radius: 9999px;
@@ -791,12 +801,12 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
-.bg-transparent{
-	background-color: transparent;
-}
 .bg-white{
 	--tw-bg-opacity: 1;
 	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+.bg-transparent{
+	background-color: transparent;
 }
 .bg-blue-300{
 	--tw-bg-opacity: 1;
@@ -804,6 +814,9 @@ video {
 }
 .bg-gradient-to-tr{
 	background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+.p-2{
+	padding: 0.5rem;
 }
 .p-4{
 	padding: 1rem;
@@ -882,6 +895,18 @@ video {
 .align-middle{
 	vertical-align: middle;
 }
+.text-4xl{
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+}
+.text-6xl{
+	font-size: 3.75rem;
+	line-height: 1;
+}
+.text-2xl{
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
 .text-sm{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -890,10 +915,6 @@ video {
 	font-size: 0.75rem;
 	line-height: 1rem;
 }
-.text-2xl{
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
 .text-xl{
 	font-size: 1.25rem;
 	line-height: 1.75rem;
@@ -901,17 +922,27 @@ video {
 .font-medium{
 	font-weight: 500;
 }
+.font-extralight{
+	font-weight: 200;
+}
 .font-light{
 	font-weight: 300;
 }
 .uppercase{
 	text-transform: uppercase;
 }
+.leading-none{
+	line-height: 1;
+}
 .tracking-wider{
 	letter-spacing: 0.05em;
 }
 .tracking-wide{
 	letter-spacing: 0.025em;
+}
+.text-yellow-500{
+	--tw-text-opacity: 1;
+	color: rgba(245, 158, 11, var(--tw-text-opacity));
 }
 .text-white{
 	--tw-text-opacity: 1;
@@ -2519,6 +2550,15 @@ video {
 @media (min-width: 1024px){
 	.lg\:mb-0{
 		margin-bottom: 0px;
+	}
+	.lg\:ml-10{
+		margin-left: 2.5rem;
+	}
+	.lg\:mt-12{
+		margin-top: 3rem;
+	}
+	.lg\:h-96{
+		height: 24rem;
 	}
 	.lg\:w-6\/12{
 		width: 50%;

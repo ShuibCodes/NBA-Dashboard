@@ -171,7 +171,7 @@ function MVP() {
   // work out how to put tie all the array of objects together to make multiple lines on the chart
   // style={{ height: "400px", width: "680px" }}
   return (
-    <div class="h-96 w-96 lg:w-inner" >
+    <div class="h-96 w-64  lg:h-96 w-96 lg:w-inner" >
       <ResponsiveLine
         data={lebron}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
@@ -210,32 +210,32 @@ function MVP() {
         pointBorderColor={{ from: "serieColor" }}
         pointLabelYOffset={-12}
         useMesh={true}
-        legends={[
-          {
-            anchor: "top",
-            direction: "row",
-            justify: false,
-            translateX: 126,
-            translateY: -50,
-            itemsSpacing: 0,
-            itemDirection: "left-to-right",
-            itemWidth: 80,
-            itemHeight: 20,
-            itemOpacity: 0.75,
-            symbolSize: 12,
-            symbolShape: "circle",
-            symbolBorderColor: "rgba(0, 0, 0, .5)",
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemBackground: "rgba(0, 0, 0, .03)",
-                  itemOpacity: 1,
-                },
-              },
-            ],
-          },
-        ]}
+        // legends={[
+        //   {
+        //     anchor: "top",
+        //     direction: "row",
+        //     justify: false,
+        //     translateX: 126,
+        //     translateY: -50,
+        //     itemsSpacing: 0,
+        //     itemDirection: "left-to-right",
+        //     itemWidth: 80,
+        //     itemHeight: 20,
+        //     itemOpacity: 0.75,
+        //     symbolSize: 12,
+        //     symbolShape: "circle",
+        //     symbolBorderColor: "rgba(0, 0, 0, .5)",
+        //     effects: [
+        //       {
+        //         on: "hover",
+        //         style: {
+        //           itemBackground: "rgba(0, 0, 0, .03)",
+        //           itemOpacity: 1,
+        //         },
+        //       },
+        //     ],
+        //   },
+        // ]}
       />
     </div>
   );
