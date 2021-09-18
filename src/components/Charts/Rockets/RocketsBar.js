@@ -286,7 +286,8 @@ import React, {
       <>
          <div className="w-auto h-auto   lg:ml-10 lg:mt-6 lg:w-inner">
       <button class="bg-blue-300 w-46  h-10 ml-10   rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
-        <div class="w-auto h-96 px-11 relative right-24 ">
+      <div style={{position:"relative", right:"34px", padding:"20px" }} class="h-96 w-timer ">
+    
           {data ? (
             <ResponsiveBar
               data={data}
@@ -323,14 +324,7 @@ import React, {
               borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
               axisTop={null}
               axisRight={null}
-              axisBottom={{
-                tickSize: 5,
-                tickPadding: 5,
-                tickRotation: 0,
-                legend: "stats",
-                legendPosition: "middle",
-                legendOffset: 40,
-              }}
+              
               axisLeft={{
                 tickSize: 5,
                 tickPadding: 5,
@@ -342,30 +336,7 @@ import React, {
               labelSkipWidth={12}
               labelSkipHeight={12}
               labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
-              legends={[
-                {
-                  dataFrom: "keys",
-                  anchor: "bottom-right",
-                  direction: "column",
-                  justify: false,
-                  translateX: 170,
-                  translateY: -130,
-                  itemsSpacing: 2,
-                  itemWidth: 100,
-                  itemHeight: 20,
-                  itemDirection: "left-to-right",
-                  itemOpacity: 0.85,
-                  symbolSize: 20,
-                  effects: [
-                    {
-                      on: "hover",
-                      style: {
-                        itemOpacity: 1,
-                      },
-                    },
-                  ],
-                },
-              ]}
+              
             />
           ) : null}
         </div>

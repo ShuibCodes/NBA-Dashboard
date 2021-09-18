@@ -15,7 +15,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
             <div className="container max-w-full mx-auto flex items-center justify-between md:pr-8 md:pl-10">
                 <div className="md:hidden">
                     <Button
-                        color="transparent"
+                        color="lightBlue"
                         buttonType="link"
                         size="lg"
                         iconOnly

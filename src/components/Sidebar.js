@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import AdminNavbar from "./AdminNavbar";
 import Icon from "@material-tailwind/react/Icon";
@@ -11,27 +11,38 @@ import Suns from '../assets/SVG/Phoenixlogo'
 import Okc from '../assets/SVG/OKClogo'
 import logo from '../assets/img/nba-log.png'
 
+
 export default function Sidebar() {
   const [showSidebar, setShowSidebar] = useState("-left-94");
+  const [open, setOpen]= useState(true)
+
+  useEffect(() => {
+    setOpen(true)
+    
+  }, []);
+
   return (
+  
+ 
     <>
+               <button style={{margin:"20px", padding:"7px" , borderRadius:"10px", backgroundColor:"#0292DC", fontSize:"22px",}} className=" z-40 border-2 bg-amber-200  text-3xl lg:hidden" onClick={() => setOpen(!open)}  > Menu </button>
+    { open ?
+    <div>
       <AdminNavbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div
         className={`h-screen fixed top-0 md:left-0 ${showSidebar} overflow-y-auto flex-row flex-nowrap overflow-hidden shadow-xl bg-white w-64 z-10 py-4 px-6 transition-all duration-300`}
       >
         <div className="flex-col items-stretch min-h-full flex-nowrap px-0 relative">
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
+          <div
             className="mt-2 text-center w-full inline-block"
           >
+            <button style={{margin:"20px", padding:"7px" , borderRadius:"10px", backgroundColor:"#0292DC", fontSize:"22px", position:"relative", left:"5.2rem"}} className="z-40 lg:hidden  border-2 bg-amber-200  text-3xl" onClick={() => setOpen(!open)}  > Menu </button>
             <img
               className="h-27 w-logo relative left-2 px-10"
               src={logo}
               alt="logo"
             ></img>
-          </a>
+          </div>
           <div className="flex flex-col">
             <hr className="my-4 min-w-full" />
 
@@ -53,8 +64,9 @@ export default function Sidebar() {
               >
                 <Suns/>
                 <NavLink
-                  to="/phoenix_suns"
+                  to="/sunsCharts"
                   className="flex items-center gap-4 text-sm text-gray-700 font-light px-4 py-3 rounded-lg"
+                 
                 >
                   {/* <Icon name="phoenix_suns" size="2xl" /> */}
                   Phoenix Suns
@@ -132,6 +144,10 @@ export default function Sidebar() {
           </div>
         </div>
       </div>
+      </div>
+     :
+     <></>
+     }
     </>
   );
 }

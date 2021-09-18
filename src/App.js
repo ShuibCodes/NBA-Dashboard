@@ -6,18 +6,19 @@ import clippers from './components/Charts/Clippers/Clippers'
 import rockets from './components/Charts/Rockets/Rockets'
 import gsw from './components/Charts/GSW/GSW'
 import okc from './components/Charts/OKC/OKC'
+import suns from './components/Phoenix/sunsCharts'
 import Timer from '../src/Timer'
 import ReactGA from 'react-ga';
-import auth from './auth.ts'; // Sample authentication provider
+ // Sample authentication provider
 
 
-const trackingId = "UA-207304431-1"; // Replace with your Google Analytics tracking ID
-ReactGA.initialize(trackingId);
-ReactGA.set({
-  userId: auth.currentUserId(),
-  // any data that is relevant to the user session
-  // that you would like to track with google analytics
-})
+// const trackingId = "UA-207304431-1"; // Replace with your Google Analytics tracking ID
+// ReactGA.initialize(trackingId);
+// ReactGA.set({
+//   userId: auth.currentUserId(),
+//   // any data that is relevant to the user session
+//   // that you would like to track with google analytics
+// })
 
 // Tailwind CSS Style Sheet
 import 'assets/styles/tailwind.css';
@@ -48,6 +49,9 @@ function App() {
                 </Switch>
                 <Switch>
                     <Route exact path="/OKC" component={okc} />
+                </Switch>
+                <Switch>
+                    <Route exact path="/sunsCharts" component={suns} />
                 </Switch>
                 
                 <Switch>

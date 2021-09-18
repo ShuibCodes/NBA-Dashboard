@@ -113,7 +113,7 @@ function LebronLine() {
             anchor: "top",
             direction: "row",
             justify: false,
-            translateX: 126,
+            translateX: 60,
             translateY: -50,
             itemsSpacing: 0,
             itemDirection: "left-to-right",

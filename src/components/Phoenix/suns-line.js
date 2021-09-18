@@ -2,40 +2,43 @@ import React, { useMemo } from "react";
 import { ResponsiveLine } from "@nivo/line";
 
 
-const westbrook = [
-    {
-        season: 2015,
-        pts: 22.2,
-      },
-    {
-        season: 2016,
-        pts: 31.1,
-      },
-      {
-        season: 2017,
-        pts: 25.4,
-      },
-      {
-        season: 2018,
-        pts: 22.2,
-      },
-      {
-        season: 2019,
-        pts: 25.3,
-      },
-    
-      {
-        season: 2020,
-        pts: 22.2,
-      },
-]
 
+const kawhi_data = [
+    {
+      season: 2015,
+      pts: 13.8,
+    },
+    {
+      season: 2016,
+      pts: 22.1,
+    },
+    {
+      season: 2017,
+      pts: 24.9,
+    },
+    {
+      season: 2018,
+      pts: 26.6,
+    },
+    {
+      season: 2019,
+      pts: 26.6,
+    },
+    {
+      season: 2020,
+      pts: 25.6,
+    },
+    {
+      season: 2021,
+      pts: 25.6,
+    },
+  ];
 
 function LebronLine() {
 
   const data = [
     {
-      id: "Lebron James",
+      id: "Devin Booker",
       color: "hsl(22, 70%, 50%)",
       data: [],
     },
@@ -60,7 +63,7 @@ function LebronLine() {
     return data;
   };
 
-  const russ  = filteredData(data, westbrook);
+  const kawhi = filteredData(data, kawhi_data);
  
   
   // work out how to put tie all the array of objects together to make multiple lines on the chart
@@ -68,7 +71,7 @@ function LebronLine() {
   return (
     <div class="h-96 w-96 lg:w-inner" >
       <ResponsiveLine
-        data={russ}
+        data={kawhi}
         margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: "point" }}
         yScale={{

@@ -19,7 +19,8 @@ module.exports = {
                 'logo' : '200px',
               },
             width :{
-                'inner': '680px'
+                'inner': '680px',
+                'timer' : '500px'
             }
         },
     },

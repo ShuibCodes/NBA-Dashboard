@@ -32,13 +32,13 @@ import React, {
     "fta": 7.18,
     "oreb": 1.31,
     "dreb": 7.32,
-    "reb": 10.7,
-    "ast": 10.4,
+    "reb": 4.5,
+    "ast": 6.6,
     "stl": 1.24,
     "blk": 0.59,
     "turnover": 4.09,
     "pf": 1.81,
-    "pts": 31.1,
+    "pts": 22.1,
     "fg_pct": 0.548,
     "fg3_pct": 0.363,
     "ft_pct": 0.674
@@ -58,13 +58,13 @@ import React, {
     "fta": 6.48,
     "oreb": 1.18,
     "dreb": 7.46,
-    "reb": 10,
-    "ast": 10,
+    "reb": 8.65,
+    "ast": 9.11,
     "stl": 1.41,
     "blk": 0.87,
     "turnover": 4.23,
     "pf": 1.66,
-    "pts": 25.4,
+    "pts": 24.9,
     "fg_pct": 0.542,
     "fg3_pct": 0.367,
     "ft_pct": 0.731
@@ -84,13 +84,13 @@ import React, {
     "fta": 7.6,
     "oreb": 1.02,
     "dreb": 7.42,
-    "reb": 11.1,
-    "ast": 10.7,
+    "reb": 5.3,
+    "ast": 5.2,
     "stl": 1.31,
     "blk": 0.6,
     "turnover": 3.58,
     "pf": 1.71,
-    "pts": 22.9,
+    "pts": 26.6,
     "fg_pct": 0.51,
     "fg3_pct": 0.339,
     "ft_pct": 0.665
@@ -110,13 +110,13 @@ import React, {
         fta: 5.69,
         oreb: 0.96,
         dreb: 6.85,
-        reb: 7.9,
-        ast: 7.7,
+        reb: 5.2,
+        ast: 6.6,
         stl: 1.16,
         blk: 0.55,
         turnover: 3.9,
         pf: 1.76,
-        pts: 27.2,
+        pts: 26.6,
         fg_pct: 0.493,
         fg3_pct: 0.348,
         ft_pct: 0.693,
@@ -137,13 +137,13 @@ import React, {
         fta: 5.67,
         oreb: 0.64,
         dreb: 7.02,
-        reb: 11.5,
-        ast: 11.7,
+        reb: 5.5,
+        ast: 5.8,
         stl: 1.07,
         blk: 0.56,
         turnover: 3.73,
         pf: 1.56,
-        pts: 22.2,
+        pts: 25.6,
         fg_pct: 0.513,
         fg3_pct: 0.365,
         ft_pct: 0.698,
@@ -151,30 +151,30 @@ import React, {
     ];
     
     const season21 = [
-        {
-            games_played: 45,
-            player_id: 237,
-            season: 2020,
-            min: "33:24",
-            fgm: 9.38,
-            fga: 18.29,
-            fg3m: 2.31,
-            fg3a: 6.33,
-            ftm: 3.96,
-            fta: 5.67,
-            oreb: 0.64,
-            dreb: 7.02,
-            reb: 11.5,
-            ast: 11.7,
-            stl: 1.07,
-            blk: 0.56,
-            turnover: 3.73,
-            pf: 1.56,
-            pts: 22.2,
-            fg_pct: 0.513,
-            fg3_pct: 0.365,
-            ft_pct: 0.698,
-          },
+      {
+        games_played: 45,
+        player_id: 237,
+        season: 2020,
+        min: "33:24",
+        fgm: 9.38,
+        fga: 18.29,
+        fg3m: 2.31,
+        fg3a: 6.33,
+        ftm: 3.96,
+        fta: 5.67,
+        oreb: 0.64,
+        dreb: 7.7,
+        reb: 5,
+        ast: 7.8,  
+        stl: 1.07,
+        blk: 0.56,
+        turnover: 3.73,
+        pf: 1.56,
+        pts: 25.6,
+        fg_pct: 0.513,
+        fg3_pct: 0.365,
+        ft_pct: 0.698,
+      },
     ];
   
   
@@ -270,21 +270,22 @@ import React, {
   
   
    
-  const [layout , setLayout] = useState("vertical")
+    const [layout , setLayout] = useState("vertical")
   
     
-    const changeLayout = () => {
-        if(layout === "vertical"){
-          setLayout("horizontal")
-        } else if(layout == "horizontal"){
-          setLayout("vertical")
-  
-        }
+  const changeLayout = () => {
+    if(layout === "vertical"){
+      setLayout("horizontal")
+    } else if(layout == "horizontal"){
+      setLayout("vertical")
+
     }
+}
+
   
     return (
       <>
-          <div className="w-auto h-auto   lg:ml-10 lg:mt-6 lg:w-inner">
+       <div className="w-auto h-auto   lg:ml-10 lg:mt-6 lg:w-inner">
       
       <button class="bg-blue-300 w-46  h-10 ml-10   rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
       <div style={{position:"relative", right:"34px", padding:"20px" }} class="h-96 w-timer ">
