@@ -4139,7 +4139,7 @@ console.log(FinalChartData)
 
 
     return (
-        <div class="h-96 w-timer  relative right-24">
+        <div class="h-96 w-timer  relative right-8">
         
               <ResponsiveBar
         data={FinalChartData}

@@ -539,11 +539,8 @@ video {
 .bottom-0{
 	bottom: 0px;
 }
-.right-24{
-	right: 6rem;
-}
-.right-32{
-	right: 8rem;
+.right-12{
+	right: 3rem;
 }
 .z-50{
 	z-index: 50;
@@ -830,9 +827,6 @@ video {
 .p-4{
 	padding: 1rem;
 }
-.p-12{
-	padding: 3rem;
-}
 .px-5{
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
@@ -884,10 +878,6 @@ video {
 .py-1{
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
-}
-.px-11{
-	padding-left: 2.75rem;
-	padding-right: 2.75rem;
 }
 .pt-8{
 	padding-top: 2rem;

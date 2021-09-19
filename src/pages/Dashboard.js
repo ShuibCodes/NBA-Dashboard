@@ -6,6 +6,7 @@ import TrafficCard from 'components/TrafficCard';
 
 
 import Timer from '../Timer'
+import Tweets from 'components/Tweets';
 export default function Dashboard() {
 
 
@@ -45,7 +46,8 @@ export default function Dashboard() {
                             percentageColor="green"
                             date="Since last month"
                         />
-                      
+                        
+                      <Tweets/>
                      
                     
                     </div>
