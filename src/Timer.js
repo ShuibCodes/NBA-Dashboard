@@ -27,7 +27,7 @@ function Timer() {
    
 <div class="min-w-screen min-h-96 flex items-center justify-center px-5 py-5" x-data="beer()" x-init="start()">
     <div class="text-black-100">
-        <h1 class="text-2xl lg:text-4xl   text-center mb-3 font-medium">The 2021/2022 NBA Season Starts </h1>
+        <h1 class="text-2xl lg:text-4xl   text-center mb-3 font-medium">The 2021/2022 NBA Season has Started </h1>
         <div class="text-6xl text-center  flex w-timer lg: w-screen  items-center justify-center">
             <div class="text-2xl mr-1 font-extralight">in</div>
             <div style={{color:"#CF1B5D"}} class="w-24 mx-1 p-2 bg-white text-yellow-500 rounded-lg">
