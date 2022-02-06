@@ -1,101 +1,102 @@
 import React, {
-    useState,
-    useEffect,
-    useCallback,
-    useMemo,
-    useRef,
-  } from "react";
-  
-  import { ResponsiveBar } from "@nivo/bar";
-  
-  import { useInterval } from 'use-interval';
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+  useRef,
+} from "react";
+
+import { ResponsiveBar } from "@nivo/bar";
+
+import { useInterval } from 'use-interval';
 
 
 
 // Moved all this static data out of the component so that
 // rerenders dont need to re compute it again.
 
-
+// use Fetch to pull in Data directly from API 
 
 function KawhiBar() {
 
 
 
-  const season16 = [ { "games_played": 74,
-  "player_id": 237,
-  "season": 2016,
-  "min": "37:45",
-  "fgm": 9.95,
-  "fga": 18.16,
-  "fg3m": 1.68,
-  "fg3a": 4.62,
-  "ftm": 4.84,
-  "fta": 7.18,
-  "oreb": 1.31,
-  "dreb": 7.32,
-  "reb": 5.8,
-  "ast": 3.5,
-  "stl": 1.24,
-  "blk": 0.59,
-  "turnover": 4.09,
-  "pf": 1.81,
-  "pts": 25.5,
-  "fg_pct": 0.548,
-  "fg3_pct": 0.363,
-  "ft_pct": 0.674
-}]
+  const season16 = [{
+    "games_played": 74,
+    "player_id": 237,
+    "season": 2016,
+    "min": "37:45",
+    "fgm": 9.95,
+    "fga": 18.16,
+    "fg3m": 1.68,
+    "fg3a": 4.62,
+    "ftm": 4.84,
+    "fta": 7.18,
+    "oreb": 1.31,
+    "dreb": 7.32,
+    "reb": 5.8,
+    "ast": 3.5,
+    "stl": 1.24,
+    "blk": 0.59,
+    "turnover": 4.09,
+    "pf": 1.81,
+    "pts": 25.5,
+    "fg_pct": 0.548,
+    "fg3_pct": 0.363,
+    "ft_pct": 0.674
+  }]
 
 
-const season17 = [{
-  "games_played": 82,
-  "player_id": 237,
-  "season": 2017,
-  "min": "36:53",
-  "fgm": 10.45,
-  "fga": 19.27,
-  "fg3m": 1.82,
-  "fg3a": 4.95,
-  "ftm": 4.73,
-  "fta": 6.48,
-  "oreb": 1.18,
-  "dreb": 7.46,
-  "reb": 4.7,
-  "ast": 2.3,
-  "stl": 1.41,
-  "blk": 0.87,
-  "turnover": 4.23,
-  "pf": 1.66,
-  "pts": 16.2,
-  "fg_pct": 0.542,
-  "fg3_pct": 0.367,
-  "ft_pct": 0.731
-}]
+  const season17 = [{
+    "games_played": 82,
+    "player_id": 237,
+    "season": 2017,
+    "min": "36:53",
+    "fgm": 10.45,
+    "fga": 19.27,
+    "fg3m": 1.82,
+    "fg3a": 4.95,
+    "ftm": 4.73,
+    "fta": 6.48,
+    "oreb": 1.18,
+    "dreb": 7.46,
+    "reb": 4.7,
+    "ast": 2.3,
+    "stl": 1.41,
+    "blk": 0.87,
+    "turnover": 4.23,
+    "pf": 1.66,
+    "pts": 16.2,
+    "fg_pct": 0.542,
+    "fg3_pct": 0.367,
+    "ft_pct": 0.731
+  }]
 
-const season18 = [{
-  
-  "games_played": 55,
-  "player_id": 237,
-  "season": 2018,
-  "min": "35:13",
-  "fgm": 10.15,
-  "fga": 19.91,
-  "fg3m": 2.02,
-  "fg3a": 5.95,
-  "ftm": 5.05,
-  "fta": 7.6,
-  "oreb": 1.02,
-  "dreb": 7.42,
-  "reb":3.3,
-  "ast": 7.3,
-  "stl": 1.31,
-  "blk": 0.6,
-  "turnover": 3.58,
-  "pf": 1.71,
-  "pts": 26.6,
-  "fg_pct": 0.51,
-  "fg3_pct": 0.339,
-  "ft_pct": 0.665
-}]
+  const season18 = [{
+
+    "games_played": 55,
+    "player_id": 237,
+    "season": 2018,
+    "min": "35:13",
+    "fgm": 10.15,
+    "fga": 19.91,
+    "fg3m": 2.02,
+    "fg3a": 5.95,
+    "ftm": 5.05,
+    "fta": 7.6,
+    "oreb": 1.02,
+    "dreb": 7.42,
+    "reb": 3.3,
+    "ast": 7.3,
+    "stl": 1.31,
+    "blk": 0.6,
+    "turnover": 3.58,
+    "pf": 1.71,
+    "pts": 26.6,
+    "fg_pct": 0.51,
+    "fg3_pct": 0.339,
+    "ft_pct": 0.665
+  }]
 
   const season19 = [
     {
@@ -123,7 +124,7 @@ const season18 = [{
       ft_pct: 0.693,
     },
   ];
-  
+
   const season20 = [
     {
       games_played: 45,
@@ -150,7 +151,7 @@ const season18 = [{
       ft_pct: 0.698,
     },
   ];
-  
+
   const season21 = [
     {
       games_played: 45,
@@ -166,7 +167,7 @@ const season18 = [{
       oreb: 0.64,
       dreb: 7.7,
       reb: 6.5,
-      ast: 5.2,  
+      ast: 5.2,
       stl: 1.07,
       blk: 0.56,
       turnover: 3.73,
@@ -188,8 +189,8 @@ const season18 = [{
   // we want it to.
   const idx = useRef(0);
   // memoizing these 2 constants
-  
-  const seasons = useMemo(() => [season16, season17, season18,season19, season20, season21], []);
+
+  const seasons = useMemo(() => [season16, season17, season18, season19, season20, season21], []);
   const stats = useMemo(
     () => [
       { stat: "Points", ppg: "" },
@@ -244,7 +245,7 @@ const season18 = [{
         } else if (Object.values(stat).includes("Assists")) {
           return {
             ...stat,
-           AST: dataset[0].ast,
+            AST: dataset[0].ast,
           };
         }
       });
@@ -270,84 +271,83 @@ const season18 = [{
   }, [dataset, sortedData, stats]);
 
 
- 
-  const [layout , setLayout] = useState("vertical")
 
-  
-const changeLayout = () => {
-  if(layout === "vertical"){
-    setLayout("horizontal")
-  } else if(layout == "horizontal"){
-    setLayout("vertical")
+  const [layout, setLayout] = useState("vertical")
 
+
+  const changeLayout = () => {
+    if (layout === "vertical") {
+      setLayout("horizontal")
+    } else if (layout == "horizontal") {
+      setLayout("vertical")
+
+    }
   }
-}
 
 
   return (
     <>
       <div className="w-auto h-auto   lg:ml-10 lg:mt-6 lg:w-inner">
-    
-    <button class="bg-blue-300 w-46  h-10 ml-10   rounded px-2 py-1 cursor-pointer w- whitespace-nowrap "  onClick={changeLayout} > Change Orientation </button>
-    <div style={{position:"relative", right:"34px", padding:"20px" }} class="h-96 w-timer ">
-    
-    {data ? (
-      <ResponsiveBar
-        data={data}
-        indexBy="stat"
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-        padding={0.3}
-        maxValue={40}
-        layout={layout}
-        keys={["PPG", "AST", "REB"]}
-        valueScale={{ type: "linear" }}
-        indexScale={{ type: "band", round: true }}
-        valueFormat={{ format: "", enabled: false }}
-        colors={{ scheme: "nivo" }}
-        defs={[
-          {
-            id: "dots",
-            type: "patternDots",
-            background: "inherit",
-            color: "#38bcb2",
-            size: 4,
-            padding: 1,
-            stagger: true,
-          },
-          {
-            id: "lines",
-            type: "patternLines",
-            background: "inherit",
-            color: "#eed312",
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
-        borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
-        axisTop={null}
-        axisRight={null}
-        
-        axisLeft={{
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "",
-          legendPosition: "middle",
-          legendOffset: -40,
-        }}
-        labelSkipWidth={12}
-        labelSkipHeight={12}
-        labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
-        
-      />
-    ) : null}
-  </div>
+
+        <button class="bg-blue-300 w-46  h-10 ml-10   rounded px-2 py-1 cursor-pointer w- whitespace-nowrap " onClick={changeLayout} > Change Orientation </button>
+        <div style={{ position: "relative", right: "34px", padding: "20px" }} class="h-96 w-timer ">
+
+          {data ? (
+            <ResponsiveBar
+              data={data}
+              indexBy="stat"
+              margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+              padding={0.3}
+              maxValue={40}
+              layout={layout}
+              keys={["PPG", "AST", "REB"]}
+              valueScale={{ type: "linear" }}
+              indexScale={{ type: "band", round: true }}
+              valueFormat={{ format: "", enabled: false }}
+              colors={{ scheme: "nivo" }}
+              defs={[
+                {
+                  id: "dots",
+                  type: "patternDots",
+                  background: "inherit",
+                  color: "#38bcb2",
+                  size: 4,
+                  padding: 1,
+                  stagger: true,
+                },
+                {
+                  id: "lines",
+                  type: "patternLines",
+                  background: "inherit",
+                  color: "#eed312",
+                  rotation: -45,
+                  lineWidth: 6,
+                  spacing: 10,
+                },
+              ]}
+              borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+              axisTop={null}
+              axisRight={null}
+
+              axisLeft={{
+                tickSize: 5,
+                tickPadding: 5,
+                tickRotation: 0,
+                legend: "",
+                legendPosition: "middle",
+                legendOffset: -40,
+              }}
+              labelSkipWidth={12}
+              labelSkipHeight={12}
+              labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+
+            />
+          ) : null}
+        </div>
       </div>
     </>
   );
 }
 
 export default KawhiBar
-  
- 
+

@@ -9,18 +9,11 @@ import okc from './components/Charts/OKC/OKC'
 import suns from './components/Phoenix/sunsCharts'
 import Timer from '../src/Timer'
 import ReactGA from 'react-ga';
- // Sample authentication provider
+ 
 
 
-// const trackingId = "UA-207304431-1"; // Replace with your Google Analytics tracking ID
-// ReactGA.initialize(trackingId);
-// ReactGA.set({
-//   userId: auth.currentUserId(),
-//   // any data that is relevant to the user session
-//   // that you would like to track with google analytics
-// })
 
-// Tailwind CSS Style Sheet
+
 import 'assets/styles/tailwind.css';
 import phoenix_suns from './components/phoenix_suns';
 
