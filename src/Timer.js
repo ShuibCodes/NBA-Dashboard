@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 function Timer() {
 
 
-  const targetTime = new Date("2021-10-21").getTime();
+  const targetTime = new Date("2022-04-16").getTime();
 
   
     const [currentTime, setCurrentTime] = useState(Date.now());
@@ -27,7 +27,7 @@ function Timer() {
    
 <div class="min-w-screen min-h-96 flex items-center justify-center px-5 py-5" x-data="beer()" x-init="start()">
     <div class="text-black-100">
-        <h1 class="text-2xl lg:text-4xl   text-center mb-3 font-medium">The 2021/2022 NBA Season has Started </h1>
+        <h1 class="text-2xl lg:text-4xl   text-center mb-3 font-medium">The 2021/2022 NBA Play-offs Starts In </h1>
         <div class="text-6xl text-center  flex w-timer lg: w-screen  items-center justify-center">
             <div class="text-2xl mr-1 font-extralight">in</div>
             <div style={{color:"#CF1B5D"}} class="w-24 mx-1 p-2 bg-white text-yellow-500 rounded-lg">
