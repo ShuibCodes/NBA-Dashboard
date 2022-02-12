@@ -142,12 +142,13 @@ function MVP() {
     },
   ];
 
+// function to put the stats into an array of objects like the one above. Needs to follow same format as Nivo.rocks line chart data
+  
   const filteredData = (data, nbaData) => {
-    const newData = data[0].data.push(...nbaData);
-    console.log(data);
+     data[0].data.push(...nbaData);
     const fd = data[0].data;
     console.log(data);
-    const newFd = fd.map((e) => Object.keys(fd[0]));
+    fd.map((e) => Object.keys(fd[0]));
     console.log(fd);
     // replacing with x and y
     var i;

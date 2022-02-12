@@ -10,7 +10,9 @@ function RocketsLineChart() {
                 <h6 className="uppercase text-gray-200 text-xs font-medium">
                     Overview
                 </h6>
-                <h2 className="text-white text-2xl">MVP Chart</h2>
+
+                <h5 className="text-white text-2xl">Points Per Season 2015-2021</h5>
+
             </CardHeader>
             <CardBody>
                 <div className="relative h-96 w-24">
