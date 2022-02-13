@@ -7,10 +7,8 @@ function RocketsLineChart() {
     return (
         <Card>
             <CardHeader color="orange" contentPosition="left">
-                <h6 className="uppercase text-gray-200 text-xs font-medium">
-                    Overview
-                </h6>
-                <h2 className="text-white text-2xl">MVP Chart</h2>
+             
+                <h3 className="text-white text-2xl">Points Per Season 2016-2021</h3>
             </CardHeader>
             <CardBody>
                 <div className="relative h-96 w-24">

@@ -14,7 +14,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
 	const [playerName, setplayerName] = useState(null);
 	const [playerStats, setplayerStats] = useState({});
 
-    // Search for players logic here (from video)
+    // Search for players logic here (
 
     const handleSubmit = (e) => {
 		e.preventDefault();
