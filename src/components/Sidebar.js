@@ -13,7 +13,8 @@ import logo from '../assets/img/nba-log.png'
 
 
 export default function Sidebar() {
-  const [showSidebar, setShowSidebar] = useState("-left-94");
+
+  const [showSidebar, setShowSidebar] = useState("-left-12");
   const [open, setOpen]= useState(true)
 
   useEffect(() => {
