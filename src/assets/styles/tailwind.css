@@ -530,6 +530,9 @@ video {
 .-left-64{
 	left: -16rem;
 }
+.-left-12{
+	left: -3rem;
+}
 .top-0{
 	top: 0px;
 }

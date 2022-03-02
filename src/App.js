@@ -7,6 +7,7 @@ import rockets from './components/Charts/Rockets/Rockets'
 import gsw from './components/Charts/GSW/GSW'
 import okc from './components/Charts/OKC/OKC'
 import suns from './components/Phoenix/sunsCharts'
+import PlayerCard from './components/PlayerCard'
 import Timer from '../src/Timer'
 import ReactGA from 'react-ga';
  
@@ -49,6 +50,10 @@ function App() {
                 
                 <Switch>
                     <Route exact path="/Timer" component={Timer} />
+                </Switch>
+                   
+                <Switch>
+                    <Route exact path="/PlayerStats" component={PlayerCard} />
                 </Switch>
          
             </div>
