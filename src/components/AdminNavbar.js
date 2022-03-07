@@ -72,7 +72,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
 	return (
 		<div className="max-w-screen ">
 			<nav className="bg-light-blue-500 md:ml-64 py-6 px-3">
-				<PlayerCard />
+			
 
 				<div className="container max-w-full mx-auto flex items-center justify-between md:pr-8 md:pl-10">
 					<div className="md:hidden">
@@ -111,11 +111,7 @@ export default function AdminNavbar({ showSidebar, setShowSidebar }) {
 						</div>
 					</div>
 				</div>
-				<div className="">
-					<PlayerCard>
-						<h3>h</h3>
-					</PlayerCard>
-				</div>
+				
 			</nav>
 		</div>
 	);

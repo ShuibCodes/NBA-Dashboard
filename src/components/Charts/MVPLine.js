@@ -147,16 +147,16 @@ function MVP() {
   const filteredData = (data, nbaData) => {
      data[0].data.push(...nbaData);
     const fd = data[0].data;
-    console.log(data);
+    // console.log(data);
     fd.map((e) => Object.keys(fd[0]));
-    console.log(fd);
+    // console.log(fd);
     // replacing with x and y
     var i;
     for (i = 0; i < fd.length; i++) {
       fd[i].x = fd[i]["season"];
       fd[i].y = fd[i]["pts"];
     }
-    console.log(data);
+    // console.log(data);
     return data;
   };
 

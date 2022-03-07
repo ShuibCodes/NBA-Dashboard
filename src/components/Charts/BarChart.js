@@ -49,7 +49,7 @@ const MVPBarChart = () => {
                 "Player": "Lebron", "Points": res.data.data[3].pts, "Assists":res.data.data[3].ast, "Rebounds":res.data.data[3].reb
             }
         ]
-        console.log(res.data.data)
+        // console.log(res.data.data)
         setArr( data)
        
       }).catch(err => {
@@ -60,7 +60,7 @@ const MVPBarChart = () => {
 },[])
 
 
-console.log(arr)
+// console.log(arr)
 
 
 // Old Bar Chart Data
