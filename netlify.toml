@@ -1,3 +1,5 @@
-[context.version-2] # “staging” is a branch name
-  command = "echo 'version-2'"
-  base = "version-2"
+[context.development.environment]
+REACT_APP_STAGE = “version-2”
+
+[context.production.environment]
+REACT_APP_STAGE = “nba”
