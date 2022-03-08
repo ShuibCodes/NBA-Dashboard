@@ -624,11 +624,17 @@ video {
 .-ml-4{
 	margin-left: -1rem;
 }
+.mb-14{
+	margin-bottom: 3.5rem;
+}
+.mt-32{
+	margin-top: 8rem;
+}
 .ml-10{
 	margin-left: 2.5rem;
 }
-.mb-14{
-	margin-bottom: 3.5rem;
+.mt-8{
+	margin-top: 2rem;
 }
 .block{
 	display: block;
@@ -863,6 +869,10 @@ video {
 .py-4{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+}
+.py-8{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 .px-4{
 	padding-left: 1rem;
@@ -2632,10 +2642,10 @@ video {
 	.xl\:col-end-6{
 		grid-column-end: 6;
 	}
-	.xl\:grid-cols-4{
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
 	.xl\:grid-cols-5{
 		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
+	.xl\:grid-cols-4{
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 }
