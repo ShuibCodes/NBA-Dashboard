@@ -8,7 +8,7 @@ function PlayerCard(props) {
 				<h1 className="text-lg leading-6 font-medium text-gray-900 text-center py-8">{props.name}</h1>
 
 				<h1 className="text-lg leading-6 font-medium text-gray-900">{props.playerTeam}</h1>
-				<h6 className="text-lg leading-6 font-medium text-gray-900">Games Playeddd: <span
+				<h6 className="text-lg leading-6 font-medium text-gray-900">Games Played: <span
                 className="font-medium text-gray-900"
                 >
                 {props.playerGames} 
