@@ -11,7 +11,7 @@ export default function GSW() {
         <Card>
             <CardHeader color="orange" contentPosition="left">
                
-                <h3 className="text-white text-2xl">Points Per Season 2016-2021</h3>
+                <h3 className="text-white text-2xl">Points Per Season 2015-2021</h3>
             </CardHeader>
             <CardBody>
                 <div className="relative h-96 w-24">

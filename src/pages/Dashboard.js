@@ -12,6 +12,12 @@ import { useLocation } from 'react-router-dom';
 import Tweets from 'components/Tweets';
 import axios from 'axios';
 import PlayerCard from 'components/PlayerCard';
+import '../assets/img/west.png'
+import '../assets/img/east.png'
+
+
+
+
 export default function Dashboard({ showSidebar, setShowSidebar }) {
 	// API Search logic here
 
@@ -19,7 +25,7 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 	const [playerStats, setplayerStats] = useState('');
 	const [playerInfo, setPlayerInfo] = useState('');
 
-	// Search for players
+	// Search for players, reset input 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		getPlayerId();
@@ -28,7 +34,7 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 
 	const handleChange = (event) => {
 		const replace = event.target.value;
-		if (replace.length > 0) {
+		if (replace.length >= 0) {
 			setplayerName(replace);
 		} else {
 			console.log('Please type players name!');
@@ -40,11 +46,9 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 		axios
 			.get(`https://www.balldontlie.io/api/v1/players?search=${playerName}`)
 			.then(async (res) => {
-				// player info (ID , position, team)
-				console.log(res.data.data);
-
+				// player info (ID , position, team
 				if (res.data.data[0] === undefined) {
-					alert("This player is either injured or hasn't played yet!");
+					alert("This player is not recognized or is injured");
 				} else if (res.data.data.length > 1) {
 					alert('Pleases specify the name more!');
 				} else {
@@ -72,12 +76,13 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 			});
 	};
 
-	console.log(playerInfo[0]?.['team'].full_name);
+
+
 	const location = useLocation().pathname;
 	return (
 		<>
 			<div className="max-w-screen ">
-				<nav className="bg-light-blue-500 md:ml-64 py-6 px-3">
+				<nav className="bg-light-blue-500 md:ml-24 py-6 px-3">
 					<div className="container max-w-screen mx-auto flex items-center justify-between md:pr-8 md:pl-10">
 						<div className="md:hidden">
 							<Button
@@ -125,13 +130,14 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 			<div className="px-3 md:px-8 -mt-24">
 				{playerStats ? (
 					<PlayerCard
-                        name={`${playerInfo[0]?.first_name}` + ' ' + `${playerInfo[0]?.last_name}` }
+						name={`${playerInfo[0]?.first_name}` + ' ' + `${playerInfo[0]?.last_name}`}
 						playerSeason={playerStats.season}
 						playerTeam={playerInfo[0]?.['team'].full_name}
 						playerGames={playerStats.games_played}
 						playerPoints={playerStats.pts}
 						playerAssist={playerStats.ast}
 						playerRebounds={playerStats.reb}
+						playerConference={playerInfo[0]?.["team"]?.conference}
 					/>
 				) : (
 					<div className="px-3 md:px-8 -mt-24">
@@ -153,20 +159,9 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 
 				<div className="mt-32 px-3 md:px-8">
 					<div className="container mx-auto max-w-full">
-						<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 mb-4">
-							<StatusCard
-								color="pink"
-								icon="trending_up"
-								title="Traffic"
-								amount="350,897"
-								percentage="3.48"
-								percentageIcon="arrow_upward"
-								percentageColor="green"
-								date="Since last month"
-							/>
-
+						
 							<Tweets />
-						</div>
+						
 					</div>
 				</div>
 			</div>

@@ -2576,6 +2576,9 @@ video {
 	.md\:ml-64{
 		margin-left: 16rem;
 	}
+	.md\:ml-24{
+		margin-left: 6rem;
+	}
 	.md\:hidden{
 		display: none;
 	}
@@ -2615,9 +2618,6 @@ video {
 	.lg\:w-inner{
 		width: 680px;
 	}
-	.lg\:grid-cols-2{
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
 	.lg\:flex-row{
 		flex-direction: row;
 	}
@@ -2644,8 +2644,5 @@ video {
 	}
 	.xl\:grid-cols-5{
 		grid-template-columns: repeat(5, minmax(0, 1fr));
-	}
-	.xl\:grid-cols-4{
-		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 }

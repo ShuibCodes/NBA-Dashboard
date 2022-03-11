@@ -1,17 +1,28 @@
 import React from 'react';
 import Card from '@material-tailwind/react/Card';
+import west from  '../assets/img/west.png'
+import east from '../assets/img/east.png'
+
 function PlayerCard(props) {
 	return (
 		<Card>
 			<div className="p-4">
 
 				<h1 className="text-lg leading-6 font-medium text-gray-900 text-center py-8">{props.name}</h1>
+				
+				<div className="flex">
+			
+				{
+					props.playerConference === "West"?
+					<img className="w-12 h-12" src={west} alt="west"/>: <img  className="w-24 h-24"  src={east} alt="east"/>
+				}
+				<h1 className="text-lg leading-6 font-medium text-gray-900 relative top-2 ml-2">{props.playerTeam}</h1>
+				</div>
 
-				<h1 className="text-lg leading-6 font-medium text-gray-900">{props.playerTeam}</h1>
 				<h6 className="text-lg leading-6 font-medium text-gray-900">Games Played: <span
                 className="font-medium text-gray-900"
                 >
-                {props.playerGames} 
+                {props.playerGames} 	
                 </span> </h6>
 
 				<dl className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">

@@ -1,8 +1,8 @@
-import React from "react";
-import LAChartLine from "./LACharLine";
-import LebronBar from './LebronBar'
+import React from 'react';
+import LAChartLine from './LACharLine';
+import LebronBar from './LebronBar';
 import CardBody from '@material-tailwind/react/CardBody';
-import Card from "@material-tailwind/react/Card";
+import Card from '@material-tailwind/react/Card';
 import { useState, useEffect } from 'react';
 import NavbarInput from '@material-tailwind/react/NavbarInput';
 import Button from '@material-tailwind/react/Button';
@@ -12,11 +12,13 @@ import axios from 'axios';
 
 import CardHeader from '@material-tailwind/react/CardHeader';
 function Lakers({ showSidebar, setShowSidebar }) {
-    // API Search logic here
+	// API Search logic here
 
 	const [playerName, setplayerName] = useState(null);
 	const [playerStats, setplayerStats] = useState('');
 	const [playerInfo, setPlayerInfo] = useState('');
+
+	// change API endpoint to pints from 2015-2021
 
 	// Search for players
 	const handleSubmit = (e) => {
@@ -43,6 +45,7 @@ function Lakers({ showSidebar, setShowSidebar }) {
 				console.log(res.data.data);
 
 				if (res.data.data[0] === undefined) {
+				
 					alert("This player is either injured or hasn't played yet!");
 				} else if (res.data.data.length > 1) {
 					alert('Pleases specify the name more!');
@@ -71,15 +74,11 @@ function Lakers({ showSidebar, setShowSidebar }) {
 			});
 	};
 
-
 	const location = useLocation().pathname;
-  return (
-
-
-    <>
-    
+	return (
+		<>
 			<div className="max-w-screen ">
-				<nav className="bg-light-blue-500 md:ml-64 py-6 px-3">
+				<nav className="bg-light-blue-500 md:ml-24 py-6 px-3">
 					<div className="container max-w-screen mx-auto flex items-center justify-between md:pr-8 md:pl-10">
 						<div className="md:hidden">
 							<Button
@@ -114,37 +113,42 @@ function Lakers({ showSidebar, setShowSidebar }) {
 										onChange={handleChange}
 									/>
 								</form>
+								
 							</div>
 						</div>
 					</div>
 				</nav>
 			</div>
 
-    <div className="mt-8 grid grid-cols-1 xl:grid-cols-5">
-    {/* line chart = start on col one, end 5 */}
-        <div className="xl:col-start-1 xl:col-end-4 px-4 mb-14">
-        <LAChartLine />
-        </div>
-              {/* bar chart = start on col 4, end 6 */}
-        <div className="xl:col-start-4 xl:col-end-6 px- mb-14">
-        <Card>
-            <CardHeader color="pink" contentPosition="left">
-                <h6 className="uppercase text-gray-200 text-xs font-medium">
-                    Overview
-                </h6>
-                <h3 className="text-white text-2xl">Stats Per Season 2015-2021</h3>
-            </CardHeader>
-            <CardBody>
-                <div className="relative h-96">
-                    <LebronBar/>
-                </div>
-            </CardBody>
-        </Card>
-      
-        </div>
-    </div>
-    </>
-  );
+			<div className="mt-8 grid grid-cols-1 xl:grid-cols-5">
+				{/* line chart = start on col one, end 5 */}
+				<div className="xl:col-start-1 xl:col-end-4 px-4 mb-14">
+					<LAChartLine
+						playerGames={playerStats.games_played}
+						playerPoints={playerStats.pts}
+						playerAssists={playerStats.ast}
+						playerRebounds={playerStats.reb}
+						playerName={`${playerInfo[0]?.first_name}` + ' ' + `${playerInfo[0]?.last_name}`}
+					/>
+				</div>
+				{/* bar chart = start on col 4, end 6 */}
+				<div className="xl:col-start-4 xl:col-end-6 px- mb-14">
+					<Card>
+						<CardHeader color="pink" contentPosition="left">
+							<h6 className="uppercase text-gray-200 text-xs font-medium">Overview</h6>
+							<h3 className="text-white text-2xl">Stats Per Season 2015-2021</h3>
+						</CardHeader>
+						<CardBody>
+							<div className="relative h-96">
+								<LebronBar />
+							</div>
+						</CardBody>
+					</Card>
+				</div>
+			</div>
+			<undefined />
+		</>
+	);
 }
 
 export default Lakers;
