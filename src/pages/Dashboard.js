@@ -82,7 +82,7 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 	return (
 		<>
 			<div className="max-w-screen ">
-				<nav className="bg-light-blue-500 md:ml-24 py-6 px-3">
+				<nav className="bg-light-blue-500 md:ml-12 py-6 px-3">
 					<div className="container max-w-screen mx-auto flex items-center justify-between md:pr-8 md:pl-10">
 						<div className="md:hidden">
 							<Button
