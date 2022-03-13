@@ -20,7 +20,7 @@ function Rockets() {
                 <h6 className="uppercase text-gray-200 text-xs font-medium">
                     Overview
                 </h6>
-                <h3 className="text-white text-2xl">Stats Per Season 2016-2021</h3>
+                <h3 className="text-white text-2xl">Stats Per Season 2015-2021</h3>
       
 
             </CardHeader>

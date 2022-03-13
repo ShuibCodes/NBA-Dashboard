@@ -215,10 +215,10 @@ const season18 = [{
       // reset index currently at 0 stored in useRef so no rerenders 
       idx.current = 0;
       setDataset(seasons[idx.current]);
-      console.log(idx.current)
+      // console.log(idx.current)
     } else {
       setDataset(seasons[idx.current]);
-      console.log(idx.current)
+      // console.log(idx.current)
 
     }
   }, [seasons]);
@@ -226,10 +226,10 @@ const season18 = [{
 
   // change data set depending on year (adding stats)
 
-  const sortedData = useCallback((dataset, nums) => {
+  const sortedData = useCallback((dataset, statistics) => {
     // added some checks to make sure we actually have a dataset
     if (dataset && dataset.length) {
-      const finalData = nums.map((stat) => {
+      const finalData = statistics.map((stat) => {
         if (Object.values(stat).includes("Points")) {
           return {
             ...stat,
@@ -247,7 +247,7 @@ const season18 = [{
           };
         }
       });
-      console.log(finalData)
+      // console.log(finalData)
       return finalData;
     }
     // return null if we dont have a dataset
