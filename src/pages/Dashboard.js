@@ -129,8 +129,9 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 
 			<div className="bg-light-blue-500 px-3 md:px-8 h-40" />
 
-			<div id="player_card" className="px-3 md:px-8 -mt-24">
+			<div className="px-3 md:px-8 -mt-24">
 				{playerStats ? (
+					<div id="player_card"  > 
 					<PlayerCard
 						name={`${playerInfo[0]?.first_name}` + ' ' + `${playerInfo[0]?.last_name}`}
 						playerSeason={playerStats.season}
@@ -141,6 +142,7 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 						playerRebounds={playerStats.reb}
 						playerConference={playerInfo[0]?.["team"]?.conference}
 					/>
+					</div>
 				) : (
 					<div className="px-3 md:px-8 -mt-24">
 						<div className="container mx-auto max-w-full">
