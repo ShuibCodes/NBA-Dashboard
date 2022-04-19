@@ -4,6 +4,8 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
+    "@cypress/react": "^5.12.4",
+    "@cypress/webpack-dev-server": "^1.8.4",
     "@material-tailwind/react": "^0.3.4",
     "@nivo/bar": "^0.73.1",
     "@nivo/core": "^0.73.0",
@@ -58,6 +60,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
+    "cypress": "^9.5.4",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.2.13",
     "postcss-cli": "^8.3.1",

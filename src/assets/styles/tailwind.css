@@ -2588,6 +2588,9 @@ video {
 	.md\:ml-24{
 		margin-left: 6rem;
 	}
+	.md\:ml-12{
+		margin-left: 3rem;
+	}
 	.md\:hidden{
 		display: none;
 	}

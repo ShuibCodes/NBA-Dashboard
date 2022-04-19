@@ -79,6 +79,7 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 
 
 	const location = useLocation().pathname;
+
 	return (
 		<>
 			<div className="max-w-screen ">
@@ -113,6 +114,7 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 									<NavbarInput
 										placeholder="Enter Players name"
 										type="text"
+										id="player_name"
 										value={playerName}
 										onChange={handleChange}
 									/>
@@ -127,7 +129,7 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 
 			<div className="bg-light-blue-500 px-3 md:px-8 h-40" />
 
-			<div className="px-3 md:px-8 -mt-24">
+			<div id="player_card" className="px-3 md:px-8 -mt-24">
 				{playerStats ? (
 					<PlayerCard
 						name={`${playerInfo[0]?.first_name}` + ' ' + `${playerInfo[0]?.last_name}`}
@@ -157,14 +159,15 @@ export default function Dashboard({ showSidebar, setShowSidebar }) {
 					</div>
 				)}
 
-				<div className="mt-32 px-3 md:px-8">
+				
+			</div>
+			<div className="mt-32 px-3 md:px-8">
 					<div className="container mx-auto max-w-full">
 						
 							<Tweets />
 						
 					</div>
 				</div>
-			</div>
 		</>
 	);
 }
